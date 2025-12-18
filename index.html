@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>THE GYM Uygulamasına Hoşgeldiniz Başarılar </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🏋️ Full Body Antrenman</h1>
+
+<!-- GÖĞÜS -->
+<div class="category" data-cat="bench">
+  <h2>Göğüs – Bench Press</h2>
+  <input placeholder="Set">
+  <input placeholder="Tekrar">
+  <input placeholder="Sayaç (sn)" id="t1">
+  <button onclick="startTimer('t1','bench')">Sayaç Başlat</button>
+  <p>Hazır</p>
+  <p>Tamamlanan set: <span class="catTotal">0</span></p>
+</div>
+
+<!-- SIRT -->
+<div class="category" data-cat="lat">
+  <h2>Sırt – Lat Pulldown</h2>
+  <input placeholder="Set">
+  <input placeholder="Tekrar">
+  <input placeholder="Sayaç (sn)" id="t2">
+  <button onclick="startTimer('t2','lat')">Sayaç Başlat</button>
+  <p>Hazır</p>
+  <p>Tamamlanan set: <span class="catTotal">0</span></p>
+</div>
+
+<!-- OMUZ -->
+<div class="category" data-cat="omuz">
+  <h2>Omuz – Lateral Raise</h2>
+  <input placeholder="Set">
+  <input placeholder="Tekrar">
+  <input placeholder="Sayaç (sn)" id="t3">
+  <button onclick="startTimer('t3','omuz')">Sayaç Başlat</button>
+  <p>Hazır</p>
+  <p>Tamamlanan set: <span class="catTotal">0</span></p>
+</div>
+
+<!-- BACAK -->
+<div class="category" data-cat="bacak">
+  <h2>Bacak – Squat</h2>
+  <input placeholder="Set">
+  <input placeholder="Tekrar">
+  <input placeholder="Sayaç (sn)" id="t4">
+  <button onclick="startTimer('t4','bacak')">Sayaç Başlat</button>
+  <p>Hazır</p>
+  <p>Tamamlanan set: <span class="catTotal">0</span></p>
+</div>
+
+<!-- KOL -->
+<div class="category" data-cat="kol">
+  <h2>Kol – Barbell Curl</h2>
+  <input placeholder="Set">
+  <input placeholder="Tekrar">
+  <input placeholder="Sayaç (sn)" id="t5">
+  <button onclick="startTimer('t5','kol')">Sayaç Başlat</button>
+  <p>Hazır</p>
+  <p>Tamamlanan set: <span class="catTotal">0</span></p>
+</div>
+
+ 
+<!-- KARIN -->
+<div class="category" data-cat="karin">
+  <h2>Karın – Plank</h2>
+  <input placeholder="Set">
+  <input placeholder="Tekrar / Süre">
+  <input placeholder="Sayaç (sn)" id="t6">
+  <button onclick="startTimer('t6','karin')">Sayaç Başlat</button>
+  <p>Hazır</p>
+  <p>Tamamlanan set: <span class="catTotal">0</span></p>
+</div>
+
+<!-- Modal ve alarm -->
+<div id="modal" class="modal">
+  <div class="modal-box">
+    <h3>Set tamamlandı mı?</h3>
+    <div class="modal-buttons">
+      <button onclick="setAnswer(true)">Evet</button>
+      <button onclick="setAnswer(false)">Hayır</button>
+    </div>
+  </div>
+</div>
+
+<audio id="questionAudio"></audio>
+<audio id="answerAudio"></audio>
+<p class="footer">Application Made By Abdülaziz</p>
+
+<script src="app.js"></script>
+</body>
+</html>
+
